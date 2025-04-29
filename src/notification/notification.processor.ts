@@ -5,6 +5,7 @@ import { SmsNotificationStrategy } from './strategies/sms.strategy';
 import { EmailNotificationStrategy } from './strategies/email.strategy';
 
 @Processor('notification-queue')
+// The worker service
 export class NotificationProcessor extends WorkerHost {
   private readonly logger = new Logger(NotificationProcessor.name);
 
